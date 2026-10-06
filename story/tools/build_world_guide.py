@@ -8,7 +8,7 @@ from reportlab.platypus import (BaseDocTemplate, PageTemplate, Frame, Paragraph,
                                 PageBreak, NextPageTemplate, Table, TableStyle, KeepTogether)
 
 W, H = A4
-OUT = "Nightmare_Frequency_World_Guide.pdf"  # written next to where you run the script
+OUT = "Nightmare_Frequency_World_Guide.pdf"
 
 INK = colors.HexColor("#0B090F")
 SLATE = colors.HexColor("#112629")
@@ -330,6 +330,7 @@ s += B(["Mythic and ceremonial, with a touch of clinical, cosmic precision, as i
         "Cultures are represented equally and respectfully. Myths are inspiration, not claims. No real modern figures as characters."])
 s += [P("Visual direction", h2)]
 s += B(["<b>Comic-noir:</b> bold shapes, hard shadow steps, heavy ink, high contrast, one key colour per room.",
+        "<b>Gothic architecture, modern light:</b> a future hybrid. Arches, vaults and stone, lit only by LED strips, neon tubes, recessed spots, light panels, caged work lights and holographic fixtures. No lanterns, gas lamps, candles or torches.",
         "<b>Fixed-camera stills:</b> high-detail backgrounds with furniture and objects painted in.",
         "<b>The Sleep:</b> deep teal and near-black with neon green and magenta, like the hallway and nightclub reference frames.",
         "<b>The Sands:</b> ochre, bone, charcoal and fire-orange, with the Tower as the only neon on the horizon.",
@@ -346,23 +347,38 @@ s.append(PageBreak())
 
 # ---------- 8 game plan ----------
 s += section("Section 9", "How the game is built")
-s += [P("The game is a separate build from the one Codex is working on. Codex helps with code and with 3D room models on the side. "
-        "Nothing here depends on the old project.")]
+s += [P("The game is a separate build from the old one. James makes all the art in Adobe Firefly. Claude writes prompts, "
+        "checks and processes images, plans boundaries and keeps the docs. A ChatGPT Codex assistant (Codex Astra) helps with "
+        "code and 3D room models on the side. Nothing here depends on the old project.")]
+s += [P("Status: six rooms locked", h2)]
+s += grid(["Room", "Key colour", "Status"], [
+    ["Metro platform (v2)", "Magenta", "Plate, plan and Godot scene done"],
+    ["Station concourse", "Emerald green", "Plate, plan and Godot scene done"],
+    ["Street at night", "Teal", "Plate, plan and Godot scene done"],
+    ["Service corridor", "Amber and magenta", "Plate, plan and Godot scene done"],
+    ["Control room", "Cold blue and magenta", "Plate, plan and scene done; floor disc undecided"],
+    ["Tunnel", "Magenta fog and green", "Plate, plan and Godot scene done"],
+], [50 * mm, 45 * mm, 75 * mm])
+s += [P("Not built yet: the upper control level and the neon-door lobby leading to the tower district.", small)]
 s += grid(["Phase", "What gets done", "What waits"], [
-    ["1. Placeholder scene", "One high-detail still background from Firefly. Walk boundaries around objects, depth layers, "
-                             "animated background parts. Art locked.", "Sprites, lighting, graphics, player."],
-    ["2. Player and camera", "A simple player, camera cuts between scenes, door triggers, basic click-and-point.", "Story scenes."],
-    ["3. Light and effects", "Coloured lighting, fog, glow, background animation polish.", "More rooms."],
-    ["4. Rooms and story", "Room by room, following the mansion map and the Tower levels.", "Extra content."],
-], [34 * mm, 90 * mm, 46 * mm])
+    ["1. Rooms and boundaries", "Six plates in the repos, walk polygons tuned in Godot, exits wired from rooms.json.", "Sprites, lighting."],
+    ["2. Placeholder player", "A silhouette to test movement, depth scaling and walk-behind layers, plus camera cuts and door triggers.", "Final characters."],
+    ["3. Sprites", "Character sheets from Firefly, cleanup into sprite sheets, wired into Godot.", "Story scenes."],
+    ["4. Light and effects", "Coloured light, fog, glyph rain and screen animation.", "More rooms."],
+    ["5. Rooms and story", "Remaining rooms and the Tower levels, following the room layout.", "Extra content."],
+], [38 * mm, 88 * mm, 44 * mm])
+s += [P("Sprites: who does what", h2)]
+s += B(["<b>James:</b> character design and images in Firefly. Make a turnaround sheet first, then use it as the reference for every frame.",
+        "<b>Claude:</b> Firefly prompts, background removal, slicing, scaling, foot anchors, sprite sheets, naming.",
+        "<b>Code assistant:</b> Godot animation, depth scaling per room, walk-behind sorting."])
 s += [P("Suggested folders for the new <b>dropzone</b> repo", h2)]
 s += B(["<b>story/</b> this guide and the Sands of Time codex",
         "<b>art/references/</b> benchmarks, nightclub frames, lit hallway frame, mansion map",
         "<b>art/backgrounds/</b> final stills, one folder per room",
         "<b>art/sprites/</b> creatures and characters, later",
         "<b>third-party/</b> third-party asset packs (such as the mansion pack), with their licence files kept beside them",
-        "<b>godot/</b> the game project",
-        "<b>docs/</b> style rules, scene notes, handoff notes"])
+        "<b>docs/</b> style rules, scene notes, room layout",
+        "<b>HANDOVER.md</b> in both repos: updated every session, read first after a crash"])
 s += callout("Keep the repo light",
              "Original art files can be very large. Keep only finished stills in the repo and leave raw Firefly exports in "
              "a folder outside it, or add Git LFS before the first big push.")
@@ -380,13 +396,15 @@ s += B(["What caused the Wiping, or does the game never say?",
         "Do the Makers get a name of their own, or one from <i>Sands of Time</i>?",
         "What do we call the Three Spirits and the two warring peoples in this game? Original names are needed.",
         "Single player only, or two-player co-op later?",
-        "Final title. “The Left Behind” is a working placeholder.",
+        "Final title. “Nightmare Frequency” is the working title.",
         "What is the ending: wake the Sleepers, leave them sleeping, or reach the Creator?"])
 s += [P("Next steps", h2)]
-s += B(["Drop the full <i>Sands of Time</i> codex into the story folder so I can merge the deities and voice into this guide.",
-        "Create the <b>dropzone</b> repo under the dorejames25-netizen account and tell me its name.",
-        "Pick the first scene for the placeholder (the Metro platform is now the lead candidate).",
-        "I write the Firefly prompt for that scene, using the bold comic style and the key colour for the room."])
+s += B(["Add the zipped plates to both repos from the PC using Git LFS, then set the repos to private before real art is pushed.",
+        "Tune the walk polygons in Godot and decide the control-room floor disc: pit, hologram or lift.",
+        "Write Firefly prompts for the upper control level and the neon-door lobby.",
+        "Make the glyph-rain animation and the screen overlays.",
+        "Drop the full <i>Sands of Time</i> codex into the story folder so the deities and voice can be merged here with original names.",
+        "Design the player character and make the placeholder silhouette."])
 s += callout("Naming and legal rules",
              "Use original names for people, places, gods and groups. Take themes from old stories, never their exact names or "
              "texts. Do not copy brands, game or film titles, logos or characters. Never mock or offend a faith or culture. "
