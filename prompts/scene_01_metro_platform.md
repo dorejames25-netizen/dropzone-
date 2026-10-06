@@ -1,6 +1,6 @@
 # Scene 1: Metro platform (background plate)
 
-**Note:** v1 was made with lantern lights and was locked before the lighting rule changed. For v2, replace "ornate iron lamp brackets" with "slim LED strip lights, neon tubes and recessed spotlights" and remove "warm amber lantern accents".
+**Note:** v1 was made with lantern lights and is superseded by `metro_platform_v2.png`, made with modern lighting. To remake it, replace "ornate iron lamp brackets" with "slim LED strip lights, neon tubes and recessed spotlights" and remove "warm amber lantern accents".
 
 Locked result: `art/backgrounds/metro_platform/metro_platform_v1.png` (2752 x 1536).
 

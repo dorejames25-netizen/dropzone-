@@ -1,12 +1,11 @@
-# Files still to add from the PC
+# Files to add from the PC
 
-The upload service blocks Git LFS from the cloud session, so these binary files are added from the local clone, where LFS works.
+Git LFS uploads are blocked from the cloud session, so binary files are added from the local clone, where LFS works.
 
-| Put here | File |
-| --- | --- |
-| `art/backgrounds/metro_platform/metro_platform_v1.png` | The scene 1 plate (2752 x 1536) |
-| `art/backgrounds/metro_platform/metro_platform_v1_plan.png` | The plan overlay |
-| `story/Nightmare_Frequency_World_Guide.pdf` | The current world guide |
-| `art/references/` | Style references (hallway, metro concept, creature, corridor concept) |
+Current batch (scene plates and plans for the six rooms):
 
-The same plate also goes in the game repo at `assets/backgrounds/metro_platform/metro_platform_v1.png`.
+1. Extract `dropzone_art_update.zip` into `C:\GitHub\dropzone-\` (choose "Extract here" at the repo root so the `art` folder merges).
+2. Extract `game_assets_update.zip` into `C:\GitHub\project-nightmare-frequency\` the same way.
+3. In each repo run `git add .`, `git commit` and `git push`.
+
+Still to add by hand when ready: `story/Nightmare_Frequency_World_Guide.pdf` and style references in `art/references/`.

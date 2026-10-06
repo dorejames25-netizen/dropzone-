@@ -1,6 +1,6 @@
 # Style standard
 
-Scene 1 (Metro platform) is the quality bar for every background plate. New art is judged against it.
+The six plates of the first section (Metro platform v2 and rooms 2 to 6) are the quality bar for every background plate. New art is judged against it.
 
 ## Format
 
