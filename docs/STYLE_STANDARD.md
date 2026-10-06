@@ -12,7 +12,8 @@ Scene 1 (Metro platform) is the quality bar for every background plate. New art 
 
 - Thick dark ink outlines over painted, grimy texture (cracked stone, peeling plaster, wet tile, splatter).
 - Hard-edged shading with sharp shadow steps. Near-black shadows, very high contrast.
-- One key colour per room. Scene 1 key is **deep magenta**, with **emerald green and teal** as the second colour and small **warm amber lamps** as the accent.
+- One key colour per room. Scene 1 key is **deep magenta**, with **emerald green and teal** as the second colour.
+- **Modern lighting only**: LED strips, neon tubes, recessed spotlights, light panels, caged work lights, holographic fixtures. Gothic is the architecture, not the lamps.
 - Wet, reflective floors that pick up the room's glow. Coloured fog near openings.
 - Gothic architecture: arches, ribbed vaults, iron brackets, gargoyles. Cyberpunk through lighting and screens, not clutter.
 
@@ -26,6 +27,7 @@ Scene 1 (Metro platform) is the quality bar for every background plate. New art 
 
 ## Never
 
+- Oil lanterns, gas lamps, candles or torches (old-fashioned lighting).
 - Real brands, logos, game or film characters, or real-world religious symbols.
 - Falling code or faces baked into the plate. Those are separate animation layers.
 
