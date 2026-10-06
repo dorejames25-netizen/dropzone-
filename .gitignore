@@ -9,3 +9,6 @@
 # Operating system junk
 Thumbs.db
 .DS_Store
+
+# Zips are for unpacking, never committed
+*.zip
