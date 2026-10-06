@@ -1,0 +1,11 @@
+# Raw generator exports and working files stay out of the repo
+/raw/
+/exports/
+/work/
+*.psd
+*.kra
+*.tmp
+
+# Operating system junk
+Thumbs.db
+.DS_Store
