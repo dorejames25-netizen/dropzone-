@@ -12,3 +12,6 @@ Thumbs.db
 
 # Zips are for unpacking, never committed
 *.zip
+
+# Local staging copy of delivered art (duplicates, loose plans, old 2755x1540 plates). Never committed.
+/PROJECT-NIGHTMARE-FREQUENCY-ART/
