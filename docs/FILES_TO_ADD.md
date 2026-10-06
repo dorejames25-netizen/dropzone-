@@ -4,7 +4,7 @@ Git LFS uploads are blocked from the cloud session, so binary files are added fr
 
 Current batch (scene plates and plans for the six rooms):
 
-1. Extract `dropzone_art_update.zip` into `C:\GitHub\dropzone-\` (choose "Extract here" at the repo root so the `art` folder merges).
+1. Extract `dropzone_art_part1.zip` and `dropzone_art_part2.zip` into `C:\GitHub\dropzone-\` (choose "Extract here" at the repo root so the `art` folder merges).
 2. Extract `game_assets_update.zip` into `C:\GitHub\project-nightmare-frequency\` the same way.
 3. In each repo run `git add .`, `git commit` and `git push`.
 
