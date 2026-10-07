@@ -8,3 +8,4 @@ Paste `00_project_brief.md` first in every new image-generator session, then the
 | `scene_01_metro_platform.md` | Background plate for scene 1 (the locked standard) |
 | `fx_glyph_rain.md` | Falling glyph animation for screens and skyline |
 | `scenes_02_06_batch.md` | Rooms 2 to 6 in one block, with the modern lighting rule |
+| `pack_3_fixes.md` | Old city: replace the kiosk in `old_street`, redo `stair_landing` with a level camera |

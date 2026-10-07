@@ -1,6 +1,6 @@
 # Room layout (first section)
 
-Locked plates, all 2752 x 1536, modern lighting. Plans (`*_plan.png`) sit beside each plate.
+Locked plates, all 2752 x 1536, modern lighting. Plans sit beside each plate: `*_plan_r2.png` is the measured round 2 plan, `*_plan.png` is the first pass.
 
 | Room | Plate | Key colour |
 | --- | --- | --- |
@@ -46,5 +46,14 @@ The same data is in `data/rooms/rooms.json` in the game repo.
 
 ## Rooms still to make
 
-1. **Upper control level**: where the control room's stairs go.
-2. **Neon-door lobby / tower district**: the street's right doorway and far tower.
+1. **Upper control level**: where the control room's stairs go. No art yet.
+2. **Neon-door lobby / tower district**: the street's right doorway and far tower. Candidates now exist in scene pack 2 (`lobby_front`, `pillar_hall`, `tower_approach`, `alley_gate`).
+
+## Next sections (candidates, nothing locked)
+
+| Section | Images | Plan doc |
+| --- | --- | --- |
+| City centre | 13 exports, 11 usable as rooms or views | `docs/SCENE_PACK_2_CITY_CENTRE.md` |
+| Old city | 10 exports, 7 usable as rooms, 3 need work | `docs/SCENE_PACK_3_OLD_CITY.md` |
+
+Room names in those docs are proposals. A room joins the table above only when its plate is locked at 2752 x 1536.

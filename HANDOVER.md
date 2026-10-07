@@ -2,7 +2,7 @@
 
 Update this file at the end of every work session, and any time something big changes. If a session crashes or runs out of context, the next session starts here.
 
-**Last updated:** 2026-10-06 22:10
+**Last updated:** 2026-10-07 03:30
 **Owner:** James Dore
 
 ## 1. What this is
@@ -56,18 +56,36 @@ Connections are in `docs/ROOM_LAYOUT.md` and `data/rooms/rooms.json`.
 - Characters and sprites are Codex Astra's job (ChatGPT Codex), not Claude's. Claude only checks and files the results and keeps the docs. Do the scene shots first, characters after.
 - Photos with real faces stay out of the repos.
 
+## 6d. Latest state (2026-10-07 03:30, desktop session on James's PC)
+- Both local repos were clean and level with `origin/main` at the start. Plates, first-pass plans, glyph-rain frames and the world guide PDF are in `dropzone-` (sections 6 and 6b are history).
+- Read every folder. All six plates are 2752x1536. Round 2 plans are 2000x1116.
+- Round 2 plans copied beside their plates as `*_plan_r2.png` (six files). **Not committed yet.**
+- Two new packs sit in the ignored staging folder `PROJECT-NIGHTMARE-FREQUENCY-ART/`: city centre (13) and old city (10). All 2755x1540, unnamed, none locked. Catalogued with proposed names, checks and first-pass plans in `docs/SCENE_PACK_2_CITY_CENTRE.md` and `docs/SCENE_PACK_3_OLD_CITY.md`.
+- Also in staging, not filed: four door-state sheets (`SUBWAY-SCENE-PACK-1/doors/`), eight source variants, the player sprite source.
+- Walk-behind cut-outs are already in the game repo (commit "Tidy folders and add cut-outs").
+- Problems found in pack 3: #2 has a red telephone kiosk with crowns (real-world design), #8 has a tilted camera, #9 and #10 do not fill the frame.
+- Size corrected: all 23 new images now have named 2752x1536 copies (`<room>_candidate_v01.png`, centre crop, no resampling) in a `sized_2752x1536/` folder inside each pack in staging. Still candidates, still not in `art/backgrounds/`.
+- Kiosk and tilted camera need new art from Firefly: prompts in `prompts/pack_3_fixes.md`.
+
 ## 7. Next steps
-0. Read every folder in `C:\GitHub\dropzone-` (zips included), check image sizes (plates should be 2752x1536), compare with this file, and report what is new.
-1. James extracts the zips, then pull, add, commit, push in each repo.
-2. Add `story/Nightmare_Frequency_World_Guide.pdf` and style references (no real faces) by hand.
-3. Open Godot and tune the first-pass walk polygons.
-4. Decide the control-room floor disc.
-5. Write prompts for the two unbuilt rooms.
-6. Glyph-rain animation prompt and assets.
-7. Merge the Sands of Time codex into the guide when provided (original names needed).
-8. Set repos private before real art/story is pushed.
+Done: old steps 0 to 2 (folders read, zips extracted and pushed, world guide added).
+
+1. Commit and push the six `*_plan_r2.png` files and the new docs.
+2. James picks which pack 2 and pack 3 images become rooms, and confirms or changes the proposed names.
+3. For each pick: export at 2752x1536, save as `<room>_v1.png`, then make the measured plan and cut-outs.
+4. Fix or drop pack 3 #2 (kiosk), #8 (camera), #9 and #10 (framing).
+5. Decide: grid floors in the city centre (keep or drift), `split_junction` two key colours.
+6. Open Godot and test the six measured rooms.
+7. Decide the control-room floor disc (same question for `pillar_hall`).
+8. Upper control level still has no art; write its prompt.
+9. Decide where the door-state sheets live (suggest `art/props/doors/`).
+10. Glyph-rain animation: frames are in, animation still to build.
+11. Merge the Sands of Time codex into the guide when provided (original names needed).
+12. Set repos private before real art/story is pushed.
 
 ## 8. Session log
+- 2026-10-07 (desktop session): the 11 walk-behind cut-outs were missing from the game repo (all scenes pointed at `assets/backgrounds/<room>/behind/` files that were not there). Copied in from the staging pack under their original names, hashes checked. Metro platform: cut-outs pixel-match the plate, boundaries checked against the plate, overlay and animation spec written (game repo `docs/METRO_PLATFORM_OVERLAY_SPEC.md`), walk test added (`scenes/debug/walk_test.tscn`, F6). Not yet run in Godot: Godot is not installed on the PC (only the zip in Downloads). Not committed.
+- 2026-10-07 03:30: desktop session. Round 2 plans filed beside plates. Packs 2 (city centre) and 3 (old city) catalogued with first-pass plans. Nothing locked, nothing committed.
 - 2026-10-07: all six rooms now have measured boundaries (scenes, exit zones, depth rule, cut-outs). Notes in game repo docs/SUBWAY_BOUNDARIES.md and docs/BOUNDARIES_NOTES.md. Needs from PC via LFS: game_walk_behind_cutouts_all.zip (into game repo root) and dropzone_plans_round2.zip (into dropzone- root). Decisions open: control-room disc, concourse 'service' opening, street 'alley' zone, tunnel platform exit, player scale cap.
 - 2026-10-07: subway (metro platform) boundaries redone on a measured grid; new scene, cut-outs and notes. Cut-out PNGs (assets/backgrounds/metro_platform/behind/) and metro_platform_v2_plan_r2.png still need adding from James's PC via LFS. Other five rooms still first-pass.
 - 2026-10-06 23:15: scene-photo workflow decided; characters go to Codex Astra.
